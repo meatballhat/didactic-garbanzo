@@ -17,10 +17,10 @@ jobs:
       - uses: actions/github-script@v7
         with:
           script: |
-            console.log('pusher:', context.payload.pusher)
-            console.log('actor:', context.payload.actor)
+            console.log('actor:', context.actor)
+            console.log('payload.pusher:', context.payload.pusher)
 
             const headCommit = context.payload['head_commit']
 
-            console.log('author:', headCommit.author)
-            console.log('committer:', headCommit.committer)
+            console.log('payload.head_commit.author:', headCommit.author)
+            console.log('payload.head_commit.committer:', headCommit.committer)
