@@ -2,4 +2,4 @@
 
 it remains a mystery[^1]
 
-[1]: Now with caramel filling
+[^1]: Now with caramel filling
