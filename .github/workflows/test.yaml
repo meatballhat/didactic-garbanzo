@@ -16,4 +16,11 @@ jobs:
 
       - uses: actions/github-script@v7
         with:
-          script: console.log(context)
+          script: |
+            console.log('pusher:', context.payload.pusher)
+            console.log('actor:', context.payload.actor)
+
+            const headCommit = context.payload['head_commit']
+
+            console.log('author:', headCommit.author)
+            console.log('committer:', headCommit.committer)
